@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CS1102 - Course Project - 2022/2023 Semester B - Group 3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Page-Enter" content="revealTrans(Transition=10,Duration=3.000)"> 
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #EFEFEF;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #50830f;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 80px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #395d0b;
+  color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+Body {
+  Background-color: #EFEFEF;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+} 
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CS1102 - Course Project - 2022/2023 Semester B</h1>
+  <p>Project Group 3: Fung Kwok Wai, Tsang Ka Long, Ng Hung Wai, Chan Chun Wa</p>
+  <p>CPU Architectures</p>
+</div>
+
+<div class="topnav">
+  <a href="CS1102_index.html">Go Back To The Home Page</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h1> What is CPU architecture? </h1>
+    <p> CPU architecture refers to the design of the central processing unit (CPU) of a computer. It includes the instruction set, the way the CPU executes instructions, and the organization of the CPU components such as registers, memory, and input/output (I/O) interfaces.</p>
+    <p>Based on their structure and properties, CPU architectures may be classified into a number of groups. For instance, although specific designs are optimized for general-purpose computing, others are tailored for particular tasks like scientific computing, artificial intelligence, or graphics processing. Reduced instruction set computing (RISC), which utilizes a smaller instruction set with simpler instructions, is the foundation of certain architectures while complex instruction set computing (CISC), which uses a large instruction set with complicated instructions, is the foundation of others. Some architectural designs are built to carry out several activities concurrently. It is a type of explicit parallelism in which the compiler arranges for several instructions to run concurrently in a single cycle without the requirement for complicated hardware support that is based on Very Long Instruction Words (VLIW).</p>
+    <br>
+    <img src ="CPUARpic1.jpeg" alt="CPUimg">
+    <h2> VLIW architecture: </h2>
+    <p>Very Long Instruction Word (VLIW) is a type of architecture designed to execute multiple operations in parallel in a single cycle, without the need for complex decoding or pipelining mechanisms.</p>
+    <p>Strengths of VLIW: 
+      <ul>
+        <li>High-performance results from the capacity to take advantage of instruction-level parallelism (ILP) and carry out several processes concurrently.</li>
+        <li>Low power consumption because of the architecture's simplicity and the lack of complicated hardware mechanisms.</li>
+      </ul>
+    </p>
+    <p>Weaknesses of VLIW: 
+      <ul>
+        <li>Difficult to schedule instructions in a way that maximizes parallelism and minimizes stalls, which requires sophisticated compiler techniques and careful design of the instruction set.</li>
+        <li>Difficult to handle unpredictable events such as cache misses or branch mispredictions, which can cause the execution to stall or introduce errors.</li>
+      </ul>
+    </p>
+    <br>
+
+    <h2> CISC architecture: </h2>
+    <p>Complex Instruction Set Computing (CISC) is a type of architecture that uses a large instruction set with complex instructions that can perform multiple operations.</p>
+    <p>Strengths of CISC: 
+      <ul>
+        <li>High code density due to the use of complex instructions that can perform multiple operations in a single instruction.</li>
+        <li>Easy to program due to the availability of high-level instructions that can perform complex operations with a single instruction.</li>
+      </ul>
+    </p>
+    <p>Weaknesses of CISC: 
+      <ul>
+        <li>Slower execution due to the complexity of the instructions and the need for multiple cycles to execute them.</li>
+        <li>Higher power consumption and complexity due to the need for complex hardware mechanisms to decode and execute the instructions.</li>
+      </ul>
+    </p>
+    <br>
+
+    <h2> RISC architecture: </h2>
+    <p>Reduced Instruction Set Computing (RISC) is a type of architecture that uses a small instruction set with simple instructions that perform only one operation.</p>
+    <p>Strengths of RISC: 
+      <ul>
+        <li>Faster execution due to the simplicity of the instructions and the ability to execute them in a single cycle.</li>
+        <li>Lower power consumption and complexity due to the absence of complex instructions and hardware mechanisms.</li>
+      </ul>
+    </p>
+    <p>Weaknesses of RISC: 
+      <ul>
+        <li>Larger code size due to the need for more instructions to perform complex operations.</li>
+        <li>More difficult to program due to the absence of high-level instructions and the need to write code that performs complex operations using multiple instructions.</li>
+      </ul>
+    </p>
+    <br>
+    <p>In general, the architecture chosen is determined by the particular needs of the application, including performance, power consumption, programming simplicity, and code density. Although it could be more challenging to program, VLIW architecture is suited for applications that need great performance and low power consumption. Although it could be slower and more complicated, CISC architecture is suited for applications that need high code density and simple programming. Although RISC architecture may have bigger code sizes and be more challenging to write, it is appropriate for applications that need quick execution and minimal power consumption.</p>
+  
+  </div>
+</div>
+
+</body>
+</html>
+

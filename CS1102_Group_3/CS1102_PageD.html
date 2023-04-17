@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CS1102 - Course Project - 2022/2023 Semester B - Group 3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Page-Enter" content="revealTrans(Transition=10,Duration=3.000)"> 
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #EFEFEF;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #50830f;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 80px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #395d0b;
+  color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+Body {
+  Background-color: #EFEFEF;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+} 
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CS1102 - Course Project - 2022/2023 Semester B</h1>
+  <p>Project Group 3: Fung Kwok Wai, Tsang Ka Long, Ng Hung Wai, Chan Chun Wa</p>
+  <p>Examples of CPU Architectures and Instruction Processing</p>
+</div>
+
+<div class="topnav">
+  <a href="CS1102_index.html">Go Back To The Home Page</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h1>Examples of CPU Architectures and Instruction Processing</h1>
+    <p> The CPU executes program instructions in a machine cycle, as demonstrated in the lecture. The CPU has four functions:
+      <ol>
+        <li>The control unit fetches and reads the command from memory.</li>
+        <li>After the control unit interprets the command (decodes it), the necessary data are transferred from memory to the arithmetic/logic unit. These first two processes are collectively known as instruction time, or I-time.</li>
+        <li>The arithmetic/logic unit executes the mathematical or logical instruction. In other words, the ALU receives control and really manipulates the data after that.</li>
+        <li>The result of this operation is stored in memory or a register by the arithmetic/logic unit. Steps 3 and 4 are referred to together as execution time, or E-time.</li>
+        <li>The control unit orders memory to deliver the result to a secondary storage device or an output device. I-time and E-time are combined to form the machine cycle.</li>
+      </ol>
+    </p>
+
+    <p>Each central processor unit has an internal clock that generates pulses at a consistent rate to keep all computer activity in sync. A single machine-cycle instruction can be made up of many sub-instructions, each of which must take at least one clock cycle. Every type of central processing unit is designed to understand a certain set of instructions known as the instruction set. Each type of CPU understands a different instruction set, just as people understand different languages. As a result, one CPU—for example, one for a Compaq personal computer—can perform many functions.</p>
+
+
+    <img src ="architecture_example.jpg" alt="example_image">
+
+    <h2> x86 architecture and CISC processing</h2>
+    <p>Since some CPUs may execute instructions that perform several operations in a single instruction. The ADD command, for example, can add two integers and store the result in a single operation.</p>
+    <p>Because fewer instructions are required to complete a job, building and running programs on x86 processors is a breeze. CISC processing has the drawback of resulting in longer instruction execution times and higher power consumption. This is because the CPU must perform more complex procedures in a single instruction, which might take longer to complete and require more resources.</p>
+    <p>Overall, x86 architecture and CISC processing show how a CPU may strike a compromise between instruction processing simplicity and efficiency by allowing a single instruction to perform many functions at the price of increasing complexity and resource use.</p>
+    <br>
+    <p>The following code snippet demonstrates x86 architecture and CISC processing in action:<br/>
+      MOV EAX, 5<br/>
+      ADD EAX, 10<br/></p>
+    <p>The first instruction MOV EAX, 5 in this example inserts the value 5 into the EAX register. The second instruction, ADD EAX, 10, adds 10 to the value stored in the EAX register and returns the result to the EAX register.</p>
+    <p>As you can see, the ADD instruction performs two actions in a single instruction: adding and storing the result. This is an illustration of CISC processing in operation.</p>
+    <p>CISC processing allows this code to be written in fewer instructions, making programming and executing code on x86 Processors comparatively simple. Nevertheless, because the CPU must conduct more complicated calculations in a single instruction, it might result in longer instruction execution times and higher power consumption.</p>
+
+
+  
+  </div>
+</div>
+
+</body>
+</html>
+

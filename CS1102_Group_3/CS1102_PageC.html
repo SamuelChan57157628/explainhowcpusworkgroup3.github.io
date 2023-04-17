@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CS1102 - Course Project - 2022/2023 Semester B - Group 3</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Page-Enter" content="revealTrans(Transition=10,Duration=3.000)"> 
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #EFEFEF;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #50830f;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 20px 80px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #395d0b;
+  color: white;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+  padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+Body {
+  Background-color: #EFEFEF;
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+} 
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>CS1102 - Course Project - 2022/2023 Semester B</h1>
+  <p>Project Group 3: Fung Kwok Wai, Tsang Ka Long, Ng Hung Wai, Chan Chun Wa</p>
+  <p>CPU Instruction Processing</p>
+</div>
+
+<div class="topnav">
+  <a href="CS1102_index.html">Go Back To The Home Page</a>
+</div>
+
+<div class="row">
+  <div class="column">
+    <h1> CPU Instruction Processing </h1>
+    <p> CPU instruction processing refers to the way in which a computer's central processing unit (CPU) executes instructions. When a program is run, its instructions are loaded into the computer's memory, and the CPU fetches each instruction in turn, decodes it, and executes it.</p>
+    <p>Until the software is finished, this process is repeated. The CPU follows a set process while executing instructions. The instruction is first read from memory and loaded into the instruction register, a unique register. The operation that has to be carried out is then determined by decoding the instruction. Finally, it performs the operation and makes any required modifications to the appropriate registers and memory locations.</p>
+    <p>Depending on the CPU architecture and the kind of instruction being processed, the specific procedures needed to carry out an instruction might differ. However, all CPUs share the basic fetch-decode-execute cycle.</p>
+
+    <h2>What instructions are and how they are processed by CPUs:</h2>
+    <p>Instructions are a set of operations that a computer program uses to tell the CPU what it needs to do. They are written in machine code, which is a low-level language that the CPU can understand and execute.</p>
+    <p>When a program is executed, its instructions are loaded into memory, and the CPU reads them one by one to execute the program. The CPU fetches an instruction from memory and loads it into the instruction register. It then decodes the instruction to determine what operation it needs to perform. Finally, it executes the instruction, which involves manipulating data in registers, performing arithmetic or logical operations, accessing memory, and/or communicating with other components in the system.</p>
+    <p>Depending on the CPU architecture and the instruction being processed, different steps may be required to process a given instruction. However, until the program is finished, the overall procedure is fetching, decoding, and executing the instruction in a repeating fashion.</p>
+    <p>By utilizing pipelining or multiple cores, certain CPUs can process several instructions at once. Pipelining divides the instruction execution process into multiple phases, enabling the CPU to process various instructions simultaneously. By distributing the burden among several processing units, multiple cores enable the CPU to carry out several commands at once. These methods can boost the CPU's efficiency and speed up the execution of more complicated programs.</p>
+    <br>
+    <img src="CPUprocessingpic1.png" alt="CPUprocess">
+
+    <h2> Overview of the different stages involved in processing instructions:</h2>
+    <p>The processing of instructions by a CPU generally involves the following stages:
+      <ol>
+        <li>Fetch: The CPU fetches the next instruction from memory and loads it into a special register called the instruction register.</li>
+        <li>Decode: The CPU decodes the instruction to determine what operation needs to be performed. This involves interpreting the bits in the instruction and identifying the instruction type, operands, and addressing mode.</li>
+        <li>Execute: The CPU performs the operation specified by the instruction. This can involve reading from and writing to registers and memory, performing arithmetic or logical operations, branching to a different instruction, or communicating with other components in the system.</li>
+        <li>Writeback: The results of the execution are written back to the appropriate register or memory location.</li>
+      </ol>
+    <br>
+
+    <h2>Further explanation on each stages:</h2>
+    <h4>Fetch Stage:</h4>
+    <p>During the fetch stage, the CPU fetches the next instruction from memory using the program counter (PC) which points to the current instruction being executed. The instruction is then loaded into a special register called the instruction register (IR). The instruction register holds the current instruction being executed and prepares the CPU for the next stage.</p>
+
+    <h4>Decode Stage:</h4>
+    <p>During the decode stage, the CPU decodes the instruction to determine what operation needs to be performed. This involves interpreting the bits in the instruction and identifying the instruction type, operands, and addressing mode. The CPU uses the opcode (operation code) to determine the type of instruction and the addressing mode to determine the location of the operands.</p>
+
+    <h4>Execute Stage:</h4>
+    <p>During the execute stage, the CPU performs the operation specified by the instruction. This can involve reading from and writing to registers and memory, performing arithmetic or logical operations, branching to a different instruction, or communicating with other components in the system. For example, if the instruction is an addition operation, the CPU will fetch the operands from the appropriate registers or memory locations, add them together, and store the result back in the register or memory location.</p>
+
+    <h4>Writeback Stage:</h4>
+    <p>During the writeback stage, the results of the execution are written back to the appropriate register or memory location. For example, if the instruction was an addition operation, the result would be stored in the destination register or memory location.</p>
+    <p>These stages are typically carried out in a repeating cycle, with each cycle processing one instruction. This is known as the fetch-decode-execute cycle.</p>
+  
+  </div>
+</div>
+
+</body>
+</html>
+
